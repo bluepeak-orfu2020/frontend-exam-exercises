@@ -16,7 +16,9 @@
      med klass "aa"
 */
 
-
+.aa + span {
+  background-color: red;
+}
 
 /*
   B) Ändra bakgrundsfärg på de tre span:arna så att de har
@@ -26,15 +28,27 @@
      Du får bara använda dig av typ-, klass-, och ID-selektorer.
 */
 
+.containerB #r {
+  background-color: red;
+}
 
+.containerB .g {
+  background-color: green;
+}
+
+.containerB span {
+  background-color: blue;
+}
 
 /*
-  C) Ändra färgen på texten på "level 3" elementen i iststrukturen
+  C) Ändra färgen på texten på "level 3" elementen i liststrukturen
      till grön. Det är bara texten på nivå tre som ska byta färg.
      Ingen text på nivå 1, 2 eller 4 får byta färg
 */
 
-
+.containerC > ul > li > ul > li > ul > li > p {
+  color: green;
+}
 
 /*
   D) Lägg till pseudo-element både före och efter alla p-element.
@@ -42,17 +56,25 @@
      Pseudo-elementet efter p-elementet ska ha innehållet "<-".
 */
 
+.containerD > p::before {
+  content: "->";
+}
 
+.containerD > p::after {
+  content: "<-";
+}
 
 /*
-  E) Lägg till ett pseudo-elemnt på alla länkar när användaren
+  E) Lägg till ett pseudo-element på alla länkar när användaren
      hover:ar på länken. Pseudo-elementet ska alltså inte visas
      hela tiden utan bara när länken är i hover-state.
 
-  Pseudo-elementet ska innehålla en länk-symbol ("🔗")
+     Pseudo-elementet ska innehålla en länk-symbol ("🔗")
 */
 
-
+.containerE a:hover::before {
+  content: "🔗";
+}
 
 /* --------------------------------------- */
 /* CSS:en nedan får inte ändras            */
