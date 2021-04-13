@@ -1,0 +1,90 @@
+/*
+  Item 1 till 5 ingår i en grid som består av 6x6 lika stora
+  celler. Placera in elementen enligt bilder layout.png.
+
+  Du får inte ändra på CSS:en under strecket.
+*/
+
+.item-1 {
+}
+
+.item-2 {
+}
+
+.item-3 {
+}
+
+.item-4 {
+}
+
+.item-5 {
+}
+
+
+
+/* --------------------------- */
+/* Du får inte ändra CSS-reglerna nedan. */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  display: grid;
+  background-color: lightgray;
+  width: 600px;
+  height: 600px;
+
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-3 {
+  background-color: #B8FB3C;
+  width: 600px;
+  height: 100px;
+}
+
+.item-1 {
+  background-color: #5CE5D5;
+  width: 300px;
+  height: 200px;
+}
+
+.item-2 {
+  background-color: #7898FB;
+  width: 300px;
+  height: 200px;
+}
+
+.item-4 {
+  background-color: #001437;
+  width: 100px;
+  height: 300px;
+}
+
+.item-5 {
+  background-color: #BC75F9;
+  width: 500px;
+  height: 300px;
+}
+
+.item::before {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.item-1::before { content: "Item 1"; }
+.item-2::before { content: "Item 2"; }
+.item-3::before { content: "Item 3"; }
+.item-4::before { content: "Item 4"; }
+.item-5::before { content: "Item 5"; }

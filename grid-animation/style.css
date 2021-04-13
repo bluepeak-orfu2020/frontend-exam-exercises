@@ -1,0 +1,94 @@
+/*
+  Skriv CSS så att lösningen till vänster i index.html ("Ditt svar")
+  Ser ut och beter sig som videon till höger ("Förväntat").
+
+  Du får använda vilken CSS du vill för att lösa problemet men ett
+  tips är att använda dig regler för grid, transform och animationer.
+*/
+
+
+
+/* -------------------------------- */
+/* Reglerna nedan får inte ändras   */
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item1 {
+  width: 100px;
+  height: 100px;
+}
+
+.item2 {
+  width: 100px;
+  height: 100px;
+}
+
+.item3 {
+  width: 100px;
+  height: 50px;
+}
+
+.item4 {
+  width: 100px;
+  height: 50px;
+}
+
+.container {
+  display: grid;
+  width: 400px;
+  height: 400px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  border: 1px solid black;
+  margin: 10px;
+  position: relative;
+}
+
+.container::before {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
+
+.container.actual::before {
+  content: "Ditt svar";
+}
+
+.container.expected::before {
+  content: "Förväntat";
+}
+
+.container.expected video {
+  /* HACK: correct poorly aligned video recording */
+  transform: translate(-1px, -1px);
+}
+
+.item1 {
+  background-color: #FEC763;
+}
+
+.item2 {
+  background-color: #EA55B1;
+}
+
+.item3 {
+  background-color: #A992FA;
+}
+
+.item4 {
+  background-color: #00207F;
+}

@@ -1,0 +1,117 @@
+/*
+  Denna uppgift testar dina kunskaper om CSS-selektorer.
+  Nedan följer en rad deluppgifter. Utför varje uppgift
+  och tänk på att fokus här är att skriva en korrekt
+  selektor.
+
+  Ibland går det att skriva en selektor som
+  åstadkommer rätt utfall men som inte är korrekt enligt
+  uppgiften. Det är viktigt att tänka på att selektorn du
+  skriver inte får inkludera mer än de element som
+  efterfrågas i uppgiften.
+*/
+
+/*
+  A) Ändra bakgrundsfärgen på span:en direkt efter elementet
+     med klass "aa"
+*/
+
+
+
+/*
+  B) Ändra bakgrundsfärg på de tre span:arna så att de har
+     färgen röd, grön och blå. Den första ska vara röd, den
+     andra ska vara grön och sen sista ska vara röd.
+
+     Du får bara använda dig av typ-, klass-, och ID-selektorer.
+*/
+
+
+
+/*
+  C) Ändra färgen på texten på "level 3" elementen i iststrukturen
+     till grön. Det är bara texten på nivå tre som ska byta färg.
+     Ingen text på nivå 1, 2 eller 4 får byta färg
+*/
+
+
+
+/*
+  D) Lägg till pseudo-element både före och efter alla p-element.
+     Pseudo-elementet innan p-elementet ska ha innehållet "->".
+     Pseudo-elementet efter p-elementet ska ha innehållet "<-".
+*/
+
+
+
+/*
+  E) Lägg till ett pseudo-elemnt på alla länkar när användaren
+     hover:ar på länken. Pseudo-elementet ska alltså inte visas
+     hela tiden utan bara när länken är i hover-state.
+
+  Pseudo-elementet ska innehålla en länk-symbol ("🔗")
+*/
+
+
+
+/* --------------------------------------- */
+/* CSS:en nedan får inte ändras            */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: lightgray;
+  margin: 30px 0 100px;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+.container::before {
+  position: absolute;
+  top: -30px;
+  height: 30px;
+  background-color: lightgray;
+  padding: 5px 10px;
+}
+
+.containerA::before {
+  content: "Deluppgift A";
+}
+.containerB::before {
+  content: "Deluppgift B";
+}
+.containerC::before {
+  content: "Deluppgift C";
+}
+.containerD::before {
+  content: "Deluppgift D";
+}
+.containerE::before {
+  content: "Deluppgift E";
+}
+
+.container.containerC {
+  height: auto;
+}
+
+span {
+  display: block;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+}
+
+p {
+  margin: 0;
+}
