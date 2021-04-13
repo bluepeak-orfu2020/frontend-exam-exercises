@@ -3,14 +3,24 @@
      Item2 ska ta upp så mycket utrymme den får.
 */
 
-
+.container-1 .item-2 {
+  flex-grow: 1;
+  /* flex-shrink: ;
+  flex-basis: ; */
+}
 
 /*
   B) Fördela alla fyra element över två rader där alla fyra
      elementen har samma bredd
 */
 
+.container-2 {
+  flex-wrap: wrap;
+}
 
+.container-2 .item {
+  flex-basis: 50%;
+}
 
 /*
   C) Positionera elementen jämnt, i sin naturliga storlek,
@@ -20,7 +30,17 @@
      underkant av containern
 */
 
+.container-3 {
+  justify-content: space-evenly;
+}
 
+.container-3 .item {
+  height: 50%;
+}
+
+.container-3 .item:nth-child(odd) {
+  align-self: flex-end;
+}
 
 /* --------------------------- */
 /* Du får inte ändra CSS-reglerna nedan. */
