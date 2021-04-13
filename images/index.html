@@ -8,12 +8,17 @@
 </head>
 <body>
   <!--
-    Använd ett picture elemnt för att presentera en bild.
+    Använd ett picture-elementet för att presentera en bild.
     Bilden ska visa small.png, medium.png eller large.png
     beroende på fönstrets storlek. Om fönstret är:
     * Mindre än 600px brett: visa small.png
     * Mellan 600px och 1000px: visa medium.png
     * Större än 1000px: visa large.png
   -->
+  <picture>
+    <source media="(min-width: 600px) and (max-width: 1000px)" srcset="medium.png">
+    <source media="(min-width: 1000px)" srcset="large.png">
+    <img src="small.png" alt="">
+  </picture>
 </body>
 </html>
