@@ -5,18 +5,22 @@
 
 .block1 {
   /* Ange en bredd som motsvarar halva webbläsarfönstrets bredd */
+  width: 50vw;
 }
 
 .block2 {
   /* Ange en bredd som motsvarar halva förälderelementets bredd */
+  width: 50%;
 }
 
 .block3 {
   /* Ange en bredd i "em" som motsvarar 400px */
+  width: 20em;
 }
 
 .block4 {
   /* Ange en bredd i "rem" som motsvarar 400px */
+  width: 40rem;
 }
 
 /* --------------------------------------- */
