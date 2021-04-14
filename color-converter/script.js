@@ -18,6 +18,16 @@ const convertFromHex = (hexValue) => {
           parseInt([hex-värde], 16).
           Ex: parseInt("F", 16) -> 15
   */
+
+  const regex = /^#(?<red>[0-9a-f]{2})(?<green>[0-9a-f]{2})(?<blue>[0-9a-f]{2})$/i;
+  const hexValueParsed = hexValue.match(regex);
+  console.log('match', hexValueParsed);
+
+  const red = parseInt(hexValueParsed.groups.red, 16);
+  const green = parseInt(hexValueParsed.groups.green, 16);
+  const blue = parseInt(hexValueParsed.groups.blue, 16);
+
+  return `rgb(${red}, ${green}, ${blue})`;
 };
 
 
