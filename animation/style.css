@@ -1,0 +1,79 @@
+
+.item1 {
+  margin: 150px;
+  width: 100px;
+  height: 75px;
+  background-color: rebeccapurple;
+
+
+  animation-name: item1-animation;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+.item1:hover {
+  animation-play-state: running;
+}
+
+@keyframes item1-animation {
+  0% { transform: rotate(0) scale(1); }
+  50% { transform: rotate(180deg) scale(2); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes item1-animation-2 {
+  0% { transform: scale(1, 1); }
+  50% { transform: scale(2, 1); }
+  100% { transform: scale(1, 1); }
+}
+
+.item2 {
+  display: inline-block;
+  margin: 150px;
+  width: 100px;
+  height: 75px;
+
+
+  animation-name: subitem1-animation;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+body:target .item1 {
+  animation-play-state: running;
+}
+body:target .item2 {
+  animation-play-state: running;
+}
+
+.item2 .subitem {
+  width: 100px;
+  height: 75px;
+  background-color: hotpink;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.item2 .subitem:nth-child(1) {
+  transform: rotate(90deg) translateX(100px);
+}
+.item2 .subitem:nth-child(2) {
+  transform: rotate(180deg) translateX(100px);
+}
+.item2 .subitem:nth-child(3) {
+  transform: rotate(270deg) translateX(100px);
+}
+.item2 .subitem:nth-child(4) {
+  transform: rotate(0deg) translateX(100px);
+}
+
+@keyframes subitem1-animation {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
