@@ -1,0 +1,28 @@
+
+header {
+  margin: 30px;
+  background-color: burlywood;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    margin: 0;
+    background-color: burlywood;
+    padding: 5px;
+  }
+}
+
+h1:hover {
+  text-decoration: underline;
+}
+
+@media screen and (pointer: coarse) {
+  h1::after {
+    content: "<- This is a link";
+  }
+}
