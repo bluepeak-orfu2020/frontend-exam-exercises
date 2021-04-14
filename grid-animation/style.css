@@ -6,7 +6,52 @@
   tips är att använda dig regler för grid, transform och animationer.
 */
 
+.item1 {
+  justify-self: center;
+  align-self: center;
+  transform: rotate(45deg);
+}
 
+.item2 {
+  justify-self: flex-start;
+  align-self: flex-end;
+  animation-name: item2-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes item2-animation {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(200px - 100%)); }
+}
+
+.item4 {
+  /* justify-self: end;
+  align-self: center;
+  transform: rotate(45deg);
+  transform-origin: left center; */
+
+  justify-self: center;
+  align-self: center;
+  transform: translateX(50%) rotate(45deg);
+  transform-origin: left center;
+}
+
+.item3 {
+  justify-self: center;
+  align-self: center;
+  transform: translateX(50%) rotate(-45deg);
+  transform-origin: left center;
+  animation-name: item3-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes item3-animation {
+  100% { transform: translateX(50%) rotate(45deg); }
+}
 
 /* -------------------------------- */
 /* Reglerna nedan får inte ändras   */
