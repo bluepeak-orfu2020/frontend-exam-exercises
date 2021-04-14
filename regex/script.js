@@ -37,3 +37,15 @@ chocolate bar muffin. Tiramisu cotton candy wafer halvah marzipan
 caramels.
 `;
 
+const regex = /\((?<person>.*?)(?:,\s(?<age>\d+))?,\s(?<city>.*)\)/g;
+const matches = input.matchAll(regex);
+const arr = [...matches];
+console.log('arr', arr);
+for (const match of arr) {
+  console.log(`
+Person:
+Namm: ${match.groups.person}
+Ålder: ${match.groups.age || 'N/A'}
+Stad: ${match.groups.city}
+  `);
+}
